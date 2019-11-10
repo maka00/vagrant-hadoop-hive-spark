@@ -1,5 +1,9 @@
 Vagrant Docker for Hadoop, Spark and Hive
 =========================================
+# General
+based on https://github.com/martinprobson/vagrant-hadoop-hive-spark 
+
+with Polynote extension [Polynote](https://polynote.org/)
 
 # Introduction
 
@@ -10,6 +14,7 @@ Vagrant project to spin up a single virtual machine running:
 * HBase 
 * Spark  
 * Tez 
+* Polynote
 
 # Version Information
 The versions of the above components that the VM is provisioned with are defined in the file `scripts/versions.sh`
@@ -25,6 +30,7 @@ The following version combinations are known to work: -
     * Pig 0.17.0
     * flume 1.7.0
     * Zeppelin 0.8.0 (with Spark/scala, md, file and JDBC interpreters)
+    * Polynote 0.2.13
     
 2. Spark-2.3.0 based on: -
     * Hadoop 2.7.6
@@ -35,6 +41,7 @@ The following version combinations are known to work: -
     * Pig 0.17.0
     * flume 1.7.0
     * Zeppelin 0.8.0 (with Spark/scala, md, file and JDBC interpreters)
+    * Polynote 0.2.13
 
 # Services
 The virtual machine will be running the following services:
@@ -110,6 +117,7 @@ Here are some useful links to navigate to various UI's:
 * HDFS: (http://node1:50070/dfshealth.html)
 * Spark history server: (http://node1:18080)
 * Spark context UI (if a Spark context is running): (http://node1:4040)
+* Polynote (started on startup): (http://127.0.0.1:8192)
 
 Substitute the ip address of the container or virtualbox VM for `node1` if necessary.
 

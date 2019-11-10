@@ -91,6 +91,10 @@ ZEPPELIN_MIRROR_DOWNLOAD=http://www-eu.apache.org/dist/zeppelin/zeppelin-${ZEPPE
 ZEPPELIN_RES_DIR=/vagrant/resources/zeppelin
 ZEPPELIN_TARGET=/home/ubuntu
 
+# Polynote
+POLYNOTE_ARCHIVE=polynote-dist.tar.gz
+POLYNOTE_DONWLOAD=https://github.com/polynote/polynote/releases/download/${POLYNOTE_VERSION}/polynote-dist.tar.gz
+POLYNOTE_RES_DIR=/vagrant/resources/polynote
 
 # Utility functions
 function resourceExists {

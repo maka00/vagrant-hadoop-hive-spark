@@ -24,6 +24,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.vm.network "forwarded_port", guest: 4040, host: 4040
     config.vm.network "forwarded_port", guest: 18888, host: 18888
     config.vm.network "forwarded_port", guest: 16010, host: 16010
+    config.vm.network "forwarded_port", guest: 8192, host: 8192
     config.vm.define "node1" do |node|
         node.vm.network :private_network, ip: '10.211.55.101'
         node.vm.hostname = 'node1'
@@ -35,6 +36,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         node.vm.provision :shell, path: 'scripts/setup-tez.sh'
 	# Optional components - uncomment to include
         node.vm.provision :shell, path: 'scripts/setup-hbase.sh'
+        node.vm.provision :shell, path: 'scripts/setup-polynote.sh'
         #node.vm.provision :shell, path: 'scripts/setup-pig.sh'
         #node.vm.provision :shell, path: 'scripts/setup-flume.sh'
         #node.vm.provision :shell, path: 'scripts/setup-sqoop.sh'
